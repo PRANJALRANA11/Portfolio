@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="bookmarksRowModel" type="com.pranjalranasapplication.app.modules.mybookmarks.data.model.BookmarksRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnrectanglefive"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_18pxh"
+        android:paddingStart="@dimen/_18pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStyleblue_gray_6">
+        <ImageView android:id="@+id/imageRectangleFive"
+            android:layout_height="@dimen/_120pxh"
+            android:layout_width="@dimen/_140pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_16pxh}"
+            imageRes="@{@drawable/img_rectangle5_120x140_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle5_120x140_1"/>
+        <TextView android:id="@+id/txtEmeraldadehotel"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{bookmarksRowModel.txtEmeraldadehotel}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_president_mila"/>
+        <LinearLayout android:id="@+id/linearRowstar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageStar"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_12pxh"
+                android:layout_width="@dimen/_12pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_star_12x12"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_star_12x12"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFortyEight"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{bookmarksRowModel.txtFortyEight}"
+                style="@style/txtUrbanistsemibold14" tools:text="@string/lbl_4_8"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@+id/txtCountry"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{bookmarksRowModel.txtCountry}"
+                style="@style/txtUrbanistregular12" tools:text="@string/lbl_paris_france"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowprice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{bookmarksRowModel.txtPrice}"
+                style="@style/txtUrbanistromanbold20_1" tools:text="@string/lbl_35"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtNight"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{bookmarksRowModel.txtNight}"
+                style="@style/txtUrbanistregular10" tools:text="@string/lbl_night"/>
+            <ImageView android:id="@+id/imageBookmark"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_bookmark_24x24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_24x24"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

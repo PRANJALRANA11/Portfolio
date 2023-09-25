@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dhi0Model" type="com.pranjalranasapplication.app.modules.dhi0.data.model.Dhi0Model"/>
+    </data>
+    <FrameLayout
+        android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+        android:id="@+id/framePhonenumber"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <FrameLayout android:id="@+id/frameCountrypickerfolder"
+            android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:id="@+id/imageFolder"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_folder"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_folder"/>
+            <ImageView android:id="@+id/imageArrowdown"
+                android:layout_height="@dimen/_4pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowdown"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown"/>
+        </FrameLayout>
+        <EditText android:background="@android:color/transparent"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_phone_number"
+            android:id="@+id/etPhonenumber" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@={dhi0Model.etPhonenumberValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+    </FrameLayout>
+</layout>

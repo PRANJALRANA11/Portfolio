@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewTicketVM" type="com.pranjalranasapplication.app.modules.viewticket.data.viewmodel.ViewTicketVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearViewTicket"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTicket"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{viewTicketVM.viewTicketModel.txtTicket}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_ticket"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnroyalepresidentOne"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_33pxv"
+            android:paddingEnd="@dimen/_22pxh"
+            android:paddingStart="@dimen/_22pxh"
+            android:paddingTop="@dimen/_33pxv" style="@style/groupStyle_2">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtRoyalepresidentOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{viewTicketVM.viewTicketModel.txtRoyalepresidentOne}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/msg_royale_presiden"/>
+            <FrameLayout android:id="@+id/frameStackvector"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_256pxv"
+                android:layout_width="@dimen/_256pxh"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyleblue_gray_900">
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_224pxh"
+                    android:layout_width="@dimen/_224pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_white_a700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_white_a700"/>
+            </FrameLayout>
+            <View android:background="@color/gray_800"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_2pxv" android:layout_width="@dimen/_335pxh"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerViewTicket"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_30pxh}" tools:itemCount="3" tools:listitem="@layout/row_ticket"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_cyan_600_01_radius_28"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnDownloadTicket"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_127pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_download_ticket"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_download_ticket"/>
+    </LinearLayout>
+</layout>

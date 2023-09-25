@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="hotelsRowModel" type="com.pranjalranasapplication.app.modules.homescreen.data.model.HotelsRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackrectanglethree"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_300pxh">
+        <ImageView android:id="@+id/imageRectangleThree"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_400pxh"
+            android:layout_width="@dimen/_300pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_36pxh}"
+            imageRes="@{@drawable/img_rectangle3_400x300_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle3_400x300_1"/>
+        <LinearLayout android:id="@+id/linearColumn48"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_cyan_600_01_radius_16"
+                android:drawablePadding="@dimen/_8pxh"
+                android:drawableStart="@drawable/img_star"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btn48"
+                android:layout_height="@dimen/_32pxv"
+                android:layout_width="@dimen/_71pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_7pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_7pxv"
+                android:singleLine="true" android:text="@string/lbl_4_8"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_4_8"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnemeraldadehotelOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_23pxv"
+                android:paddingEnd="@dimen/_32pxh"
+                android:paddingStart="@dimen/_32pxh"
+                android:paddingTop="@dimen/_23pxv" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmeraldadehotelOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{hotelsRowModel.txtEmeraldadehotelOne}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/msg_emeralda_de_hot"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCountry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{hotelsRowModel.txtCountry}"
+                    style="@style/txtUrbanistregular16" tools:text="@string/lbl_paris_france"/>
+                <LinearLayout android:id="@+id/linearRowprice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelsRowModel.txtPrice}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_292"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPernight"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{hotelsRowModel.txtPernight}"
+                        style="@style/txtUrbanistregular14" tools:text="@string/lbl_per_night"/>
+                    <FrameLayout android:id="@+id/frameGroup2535"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageView android:id="@+id/imageBookmark"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_width="@dimen/_28pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_bookmark"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

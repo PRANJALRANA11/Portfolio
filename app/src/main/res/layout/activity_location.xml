@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="locationVM" type="com.pranjalranasapplication.app.modules.location.data.viewmodel.LocationVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLocation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameStacklocation"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <fragment android:id="@+id/mapImage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_882pxv"
+                android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            <ImageView android:id="@+id/imageLocation"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_42pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_location"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+            <LinearLayout android:id="@+id/linearColumnarrowleft"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_9pxv"
+                android:paddingTop="@dimen/_9pxv" style="@style/groupStyle_1">
+                <androidx.appcompat.widget.Toolbar
+                    android:gravity="center_horizontal"
+                    android:id="@+id/toolbarAppbar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" app:contentInsetStart="0dp">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowdown_white_a700"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_white_a700"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHotellocation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{locationVM.locationModel.txtHotellocation}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_hotel_location"/>
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

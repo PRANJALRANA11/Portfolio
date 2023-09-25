@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cancelationSuccessfulVM" type="com.pranjalranasapplication.app.modules.cancelationsuccessful.data.viewmodel.CancelationSuccessfulVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumngroup"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearThemedarkmodal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_32pxh"
+            android:paddingVertical="@dimen/_32pxv" style="@style/groupStyleblue_gray_5">
+            <ImageView android:id="@+id/imageGroup"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_180pxh"
+                android:layout_width="@dimen/_185pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_group_cyan_600"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_cyan_600"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtModaltitle"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{cancelationSuccessfulVM.cancelationSuccessfulModel.txtModaltitle}"
+                style="@style/txtUrbanistromanbold24_1" tools:text="@string/lbl_successfull"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtLoremipsumdolor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{cancelationSuccessfulVM.cancelationSuccessfulModel.txtLoremipsumdolor}"
+                style="@style/txtUrbanistregular18" tools:text="@string/msg_you_have_succes"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_cyan_600_01_radius_30"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_276pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="bookingCancelledVM" type="com.pranjalranasapplication.app.modules.bookingcancelled.data.viewmodel.BookingCancelledVM"/>
+    </data>
+    <ScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearColumn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnrectangle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20pxh"
+                    android:paddingVertical="@dimen/_20pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+                    <LinearLayout android:id="@+id/linearRowrectangle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageRectangle"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_100pxh"
+                            android:layout_width="@dimen/_100pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_16pxh}"
+                            imageRes="@{@drawable/img_rectangle4_100x100_1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle4_100x100_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnroyalepresident"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRoyalepresident"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{bookingCancelledVM.bookingCancelledModel.txtRoyalepresident}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/msg_palms_casino_re"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtParisfrance"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{bookingCancelledVM.bookingCancelledModel.txtParisfrance}"
+                                style="@style/txtUrbanistregular14_1" tools:text="@string/msg_london_united"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_red_a200_1e_radius_6"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanist"
+                                android:gravity="center"
+                                android:id="@+id/btnPaid"
+                                android:layout_height="@dimen/_24pxv"
+                                android:layout_width="@dimen/_60pxh"
+                                android:letterSpacing="0.01"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_20pxh"
+                                android:paddingStart="@dimen/_20pxh"
+                                android:paddingTop="@dimen/_6pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_paid"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red_A200"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_10pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_paid"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_700_01"
+                        android:id="@+id/lineLine"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_340pxh"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_red_a200_33_radius_10"
+                        android:drawablePadding="@dimen/_7pxh"
+                        android:drawableStart="@drawable/img_warning"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:hint="@string/msg_you_canceled_th"
+                        android:id="@+id/etStatuserrorcomp"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_37pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@={bookingCancelledVM.bookingCancelledModel.etStatuserrorcompValue}"
+                        android:textColor="@color/red_A200"
+                        android:textColorHint="@color/red_A200"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_10pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnrectangleOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20pxh"
+                    android:paddingVertical="@dimen/_20pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+                    <LinearLayout
+                        android:id="@+id/linearRowrectangleOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageRectangleOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_100pxh"
+                            android:layout_width="@dimen/_100pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_16pxh}"
+                            imageRes="@{@drawable/img_rectangle_100x100_1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_100x100_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnthemarkhotel"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtThemarkhotel"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{bookingCancelledVM.bookingCancelledModel.txtThemarkhotel}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_the_mark_hotel"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCountry"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{bookingCancelledVM.bookingCancelledModel.txtCountry}"
+                                style="@style/txtUrbanistregular14_1" tools:text="@string/msg_luxemburg_germ"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_red_a200_1e_radius_6"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanist"
+                                android:gravity="center"
+                                android:id="@+id/btnPaidOne"
+                                android:layout_height="@dimen/_24pxv"
+                                android:layout_width="@dimen/_60pxh"
+                                android:letterSpacing="0.01"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_20pxh"
+                                android:paddingStart="@dimen/_20pxh"
+                                android:paddingTop="@dimen/_6pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_paid"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red_A200"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_10pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_paid"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_700_01"
+                        android:id="@+id/lineLineOne"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_340pxh"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_red_a200_33_radius_10"
+                        android:drawablePadding="@dimen/_7pxh"
+                        android:drawableStart="@drawable/img_warning"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:hint="@string/msg_you_canceled_th"
+                        android:id="@+id/etStatuserrorcompOne"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_37pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@={bookingCancelledVM.bookingCancelledModel.etStatuserrorcompOneValue}"
+                        android:textColor="@color/red_A200"
+                        android:textColorHint="@color/red_A200"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_10pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

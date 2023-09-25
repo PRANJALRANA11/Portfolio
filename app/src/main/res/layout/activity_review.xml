@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewVM" type="com.pranjalranasapplication.app.modules.review.data.viewmodel.ReviewVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearReview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{reviewVM.reviewModel.txtReview}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_review"/>
+            <ImageView android:id="@+id/imageClock"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_clock"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_clock"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnstar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="end" android:id="@+id/recyclerListstar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_8pxh}" tools:itemCount="6" tools:listitem="@layout/row_liststar1"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowrating"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRating"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{reviewVM.reviewModel.txtRating}"
+                    style="@style/txtUrbanistsemibold16_1" tools:text="@string/lbl_rating"/>
+                <FrameLayout android:id="@+id/frameGroup2603"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageStar"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_star_12x12"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_star_12x12"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyEight"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{reviewVM.reviewModel.txtFortyEight}"
+                    style="@style/txtUrbanistsemibold16" tools:text="@string/lbl_4_8"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txt4981reviews"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{reviewVM.reviewModel.txt4981reviews}"
+                    style="@style/txtUrbanistregular14" tools:text="@string/lbl_4_981_reviews"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListellipseone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_listellipseone"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

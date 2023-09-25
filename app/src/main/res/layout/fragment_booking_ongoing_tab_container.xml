@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="bookingOngoingTabContainerVM" type="com.pranjalranasapplication.app.modules.bookingongoingtabcontainer.data.viewmodel.BookingOngoingTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumngoogle"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageGoogle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_google"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_google"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMybookings"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{bookingOngoingTabContainerVM.bookingOngoingTabContainerModel.txtMybookings}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_my_bookings"/>
+            <ImageView android:id="@+id/imageSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_search_white_a700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_search_white_a700"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnchips"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutGroup137"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_cyan_600_01_radius_22"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white_A700" app:tabTextColor="@color/cyan_600_01"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabbarview"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

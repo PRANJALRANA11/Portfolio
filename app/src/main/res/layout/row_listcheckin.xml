@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcheckinRowModel" type="com.pranjalranasapplication.app.modules.confirmpayment.data.model.ListcheckinRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumncheckin"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_23pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_23pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+        <LinearLayout android:id="@+id/linearRowcheckin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCheckin"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtCheckin}"
+                style="@style/txtUrbanistsemibold16_2" tools:text="@string/lbl_check_in"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDecember162024"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtDecember162024}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_december_16_20"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowcheckout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCheckout"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtCheckout}"
+                style="@style/txtUrbanistsemibold16_2" tools:text="@string/lbl_check_out"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDecember202024"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtDecember202024}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_december_20_20"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowguest"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtGuest"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtGuest}"
+                style="@style/txtUrbanistsemibold16_2" tools:text="@string/lbl_guest"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtThree"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listcheckinRowModel.txtThree}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_3"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

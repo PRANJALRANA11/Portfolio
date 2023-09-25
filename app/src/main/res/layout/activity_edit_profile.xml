@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editProfileVM" type="com.pranjalranasapplication.app.modules.editprofile.data.viewmodel.EditProfileVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearEditProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEditprofile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtEditprofile}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_edit_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnstatusfilltyped"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_47pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_47pxv">
+            <EditText
+                android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_daniel_austin"
+                android:id="@+id/etStatusfilltyped"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@={editProfileVM.editProfileModel.etStatusfilltypedValue}"
+                android:textColor="@color/white_A700"
+                android:textColorHint="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_daniel"
+                android:id="@+id/etFirstname" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@={editProfileVM.editProfileModel.etFirstnameValue}"
+                android:textColor="@color/white_A700"
+                android:textColorHint="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+                android:drawableEnd="@drawable/img_calendar_20x20"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_12_27_1995"
+                android:id="@+id/etDob" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@={editProfileVM.editProfileModel.etDobValue}"
+                android:textColor="@color/white_A700"
+                android:textColorHint="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+                android:drawableEnd="@drawable/img_clock_20x20"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_uder_domain_com"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@={editProfileVM.editProfileModel.etEmailValue}"
+                android:textColor="@color/white_A700"
+                android:textColorHint="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <Spinner
+                android:background="@drawable/layer_list_bg_blue_gray_900_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerCountry"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            <FrameLayout android:gravity="center_horizontal"
+                android:id="@+id/framePhone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" style="@style/groupStyleblue_gray_2">
+                <FrameLayout android:id="@+id/frameCountrypickerfolder"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <ImageView android:id="@+id/imageFolder"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_folder_gray_50"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_folder_gray_50"/>
+                    <ImageView android:id="@+id/imageArrowdown"
+                        android:layout_height="@dimen/_4pxh"
+                        android:layout_width="@dimen/_9pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowdown_white_a700_4x9"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_white_a700_4x9"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCode"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{editProfileVM.editProfileModel.txtCode}"
+                        style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_110"/>
+                </FrameLayout>
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:hint="@string/lbl_123456789000"
+                    android:id="@+id/etPhonenumber"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@={editProfileVM.editProfileModel.etPhonenumberValue}"
+                    android:textColor="@color/white_A700"
+                    android:textColorHint="@color/white_A700"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </FrameLayout>
+            <Spinner
+                android:background="@drawable/layer_list_bg_blue_gray_900_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerGender"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_cyan_600_01_radius_28"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnUpdate"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_161pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_update"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_update"/>
+    </LinearLayout>
+</layout>

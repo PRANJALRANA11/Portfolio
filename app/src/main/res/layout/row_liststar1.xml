@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="liststar1RowModel" type="com.pranjalranasapplication.app.modules.review.data.model.Liststar1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearRowstar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_9pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_9pxv" style="@style/groupStylecyan_600_01cornerRadius">
+        <ImageView android:id="@+id/imageStar"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_16pxh"
+            android:layout_width="@dimen/_16pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_star"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_star"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtChips"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{liststar1RowModel.txtChips}"
+            style="@style/txtUrbanistsemibold16_1" tools:text="@string/lbl_all"/>
+    </LinearLayout>
+</layout>
