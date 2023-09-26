@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listvolumeRowModel" type="com.pranjalranasapplication.app.modules.forgotpassword.data.model.ListvolumeRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowvolume"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_24pxh"
+        android:paddingVertical="@dimen/_24pxv" style="@style/groupStyleblue_gray_3">
+        <FrameLayout android:id="@+id/frameStackvolume"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxv"
+            android:layout_width="@dimen/_80pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv" style="@style/groupStylegray_800cornerRadius">
+            <ImageView android:id="@+id/imageVolume"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_26pxh"
+                android:layout_width="@dimen/_26pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnviasms"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtViasms"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listvolumeRowModel.txtViasms}"
+                style="@style/txtUrbanistromanmedium14" tools:text="@string/lbl_via_sms"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txt111199"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listvolumeRowModel.txt111199}"
+                style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_1_111_99"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

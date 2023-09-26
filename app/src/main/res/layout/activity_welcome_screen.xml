@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="welcomeScreenVM" type="com.pranjalranasapplication.app.modules.welcomescreen.data.viewmodel.WelcomeScreenVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearWelcomeScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_45pxv"
+        android:paddingEnd="@dimen/_32pxh"
+        android:paddingStart="@dimen/_32pxh"
+        android:paddingTop="@dimen/_45pxv" style="@style/groupStylegray_901">
+        <FrameLayout android:id="@+id/frameGroup2503"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtWelcometo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{welcomeScreenVM.welcomeScreenModel.txtWelcometo}"
+            style="@style/txtUrbanistromanbold48" tools:text="@string/lbl_welcome_to"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtComfort"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{welcomeScreenVM.welcomeScreenModel.txtComfort}"
+            style="@style/txtUrbanistromanblack64" tools:text="@string/lbl_comfort"/>
+        <TextView android:id="@+id/txtThebesthotelbooOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:text="@{welcomeScreenVM.welcomeScreenModel.txtThebesthotelbooOne}"
+            style="@style/txtUrbanistsemibold18" tools:text="@string/msg_the_best_hotel"/>
+    </LinearLayout>
+</layout>

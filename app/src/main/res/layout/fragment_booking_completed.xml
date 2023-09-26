@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="bookingCompletedVM" type="com.pranjalranasapplication.app.modules.bookingcompleted.data.viewmodel.BookingCompletedVM"/>
+    </data>
+    <ScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearColumn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnrectangle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20pxh"
+                    android:paddingVertical="@dimen/_20pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+                    <LinearLayout android:id="@+id/linearRowrectangle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageRectangle"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_100pxh"
+                            android:layout_width="@dimen/_100pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_16pxh}"
+                            imageRes="@{@drawable/img_rectangle4_100x100_1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle4_100x100_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnroyalepresident"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRoyalepresident"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{bookingCompletedVM.bookingCompletedModel.txtRoyalepresident}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_bulgari_resort"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCountry"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{bookingCompletedVM.bookingCompletedModel.txtCountry}"
+                                style="@style/txtUrbanistregular14_1" tools:text="@string/lbl_paris_france"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_green_a700_1e_radius_6"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanist"
+                                android:gravity="center"
+                                android:id="@+id/btnCompleted"
+                                android:layout_height="@dimen/_24pxv"
+                                android:layout_width="@dimen/_72pxh"
+                                android:letterSpacing="0.01"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_10pxh"
+                                android:paddingStart="@dimen/_10pxh"
+                                android:paddingTop="@dimen/_6pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_completed"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cyan_600_01"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_10pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_completed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_700"
+                        android:id="@+id/lineLine"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_340pxh"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_green_400_33_radius_10"
+                        android:drawablePadding="@dimen/_7pxh"
+                        android:drawableStart="@drawable/img_checkmark_18x18"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:hint="@string/msg_yeay_you_have"
+                        android:id="@+id/etStatussuccess"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_37pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@={bookingCompletedVM.bookingCompletedModel.etStatussuccessValue}"
+                        android:textColor="@color/green_500"
+                        android:textColorHint="@color/green_500"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_10pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnrectangleOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20pxh"
+                    android:paddingVertical="@dimen/_20pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+                    <LinearLayout
+                        android:id="@+id/linearRowrectangleOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageRectangleOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_100pxh"
+                            android:layout_width="@dimen/_100pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_16pxh}"
+                            imageRes="@{@drawable/img_rectangle_100x100_1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_100x100_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnroyalepresidentOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRoyalepresidentOne"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{bookingCompletedVM.bookingCompletedModel.txtRoyalepresidentOne}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/msg_hotel_martinez"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCountryOne"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{bookingCompletedVM.bookingCompletedModel.txtCountryOne}"
+                                style="@style/txtUrbanistregular14_1" tools:text="@string/msg_amsterdam_neth"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_green_a700_1e_radius_6"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/urbanist"
+                                android:gravity="center"
+                                android:id="@+id/btnCompletedOne"
+                                android:layout_height="@dimen/_24pxv"
+                                android:layout_width="@dimen/_72pxh"
+                                android:letterSpacing="0.01"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_10pxh"
+                                android:paddingStart="@dimen/_10pxh"
+                                android:paddingTop="@dimen/_6pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_completed"
+                                android:textAllCaps="false"
+                                android:textColor="@color/cyan_600_01"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_10pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_completed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/blue_gray_700"
+                        android:id="@+id/lineLineOne"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_340pxh"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_green_400_33_radius_10"
+                        android:drawablePadding="@dimen/_7pxh"
+                        android:drawableStart="@drawable/img_checkmark_18x18"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:hint="@string/msg_yeay_you_have"
+                        android:id="@+id/etStatussuccessOne"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_37pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@={bookingCompletedVM.bookingCompletedModel.etStatussuccessOneValue}"
+                        android:textColor="@color/green_500"
+                        android:textColorHint="@color/green_500"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_10pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

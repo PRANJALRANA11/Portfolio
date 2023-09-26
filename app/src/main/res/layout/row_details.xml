@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="detailsRowModel" type="com.pranjalranasapplication.app.modules.hoteldetails.data.model.DetailsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnellipseone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_22pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_22pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+        <LinearLayout android:id="@+id/linearRowellipseone"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageEllipseOne"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse1_48x48}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_48x48"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnjennywilson"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJennywilson"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{detailsRowModel.txtJennywilson}"
+                    style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_jenny_wilson"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDec102024"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{detailsRowModel.txtDec102024}"
+                    style="@style/txtUrbanistromanmedium12_1" tools:text="@string/lbl_dec_10_2024"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameGroup2619"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_cyan_600_01_radius_16"
+                android:drawablePadding="@dimen/_8pxh"
+                android:drawableStart="@drawable/img_star"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnFive"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_32pxv"
+                android:layout_width="@dimen/_60pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_7pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_7pxv"
+                android:singleLine="true" android:text="@string/lbl_5"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_5"/>
+        </LinearLayout>
+        <TextView android:id="@+id/txtAdipiscingelit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:text="@{detailsRowModel.txtAdipiscingelit}"
+            style="@style/txtUrbanistregular14" tools:text="@string/msg_very_nice_and_c"/>
+    </LinearLayout>
+</layout>

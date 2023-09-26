@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="selectDateGuestVM" type="com.pranjalranasapplication.app.modules.selectdateguest.data.viewmodel.SelectDateGuestVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSelectdate"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{selectDateGuestVM.selectDateGuestModel.txtSelectdate}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_select_date"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumndate"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_20pxv">
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarDate"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:mcv_selectionMode="single"/>
+            <LinearLayout android:id="@+id/linearRowcheckin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumncheckin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCheckin"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{selectDateGuestVM.selectDateGuestModel.txtCheckin}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_check_in"/>
+                    <LinearLayout android:id="@+id/linearRowdeccounter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_18pxv" style="@style/groupStyleblue_gray_2">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDecCounter"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{selectDateGuestVM.selectDateGuestModel.txtDecCounter}"
+                            style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_dec_16"/>
+                        <ImageView android:id="@+id/imageCalendar"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_calendar_20x20"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_20x20"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_gravity="bottom"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu_20x20"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu_20x20"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumncheckout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCheckout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{selectDateGuestVM.selectDateGuestModel.txtCheckout}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_check_out"/>
+                    <LinearLayout
+                        android:id="@+id/linearRowdeccounterOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_18pxv" style="@style/groupStyleblue_gray_2">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDecCounterOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{selectDateGuestVM.selectDateGuestModel.txtDecCounterOne}"
+                            style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_dec_20"/>
+                        <ImageView android:id="@+id/imageCalendarOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_calendar_20x20"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_20x20"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtGuest"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{selectDateGuestVM.selectDateGuestModel.txtGuest}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_guest"/>
+            <LinearLayout android:id="@+id/linearRowmenuOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_83pxh"
+                android:paddingStart="@dimen/_83pxh"
+                android:paddingTop="@dimen/_12pxv" style="@style/groupStyleblue_gray_4">
+                <FrameLayout android:id="@+id/frameStackmenuOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxv"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyleteal_900cornerRadius">
+                    <ImageView android:id="@+id/imageMenuOne"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_menu_2"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_menu_2"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtThree"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{selectDateGuestVM.selectDateGuestModel.txtThree}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_3"/>
+                <FrameLayout android:id="@+id/frameStackplus"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxv"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStyleteal_900cornerRadius">
+                    <ImageView android:id="@+id/imagePlus"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_plus"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+                </FrameLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{selectDateGuestVM.selectDateGuestModel.txtPrice}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_total_435"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_cyan_600_01_radius_28"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_156pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

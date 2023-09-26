@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listrectanglefourRowModel" type="com.pranjalranasapplication.app.modules.homescreen.data.model.ListrectanglefourRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearRowrectanglefour"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_20pxh"
+        android:paddingVertical="@dimen/_20pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+        <ImageView android:id="@+id/imageRectangleFour"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_100pxh"
+            android:layout_width="@dimen/_100pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_16pxh}"
+            imageRes="@{@drawable/img_rectangle4_100x100_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle4_100x100_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnemeraldahotel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEmeraldahotel"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listrectanglefourRowModel.txtEmeraldahotel}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_president_hotel"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCountry"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listrectanglefourRowModel.txtCountry}"
+                style="@style/txtUrbanistregular14_1" tools:text="@string/lbl_paris_france"/>
+            <LinearLayout android:id="@+id/linearRowstar"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageStar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_width="@dimen/_12pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_star_12x12"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_star_12x12"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyEight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listrectanglefourRowModel.txtFortyEight}"
+                    style="@style/txtUrbanistsemibold14" tools:text="@string/lbl_4_8"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txt4378reviews"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listrectanglefourRowModel.txt4378reviews}"
+                    style="@style/txtUrbanistregular12" tools:text="@string/lbl_4_378_reviews"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearColumnprice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listrectanglefourRowModel.txtPrice}"
+                style="@style/txtUrbanistromanbold24_1" tools:text="@string/lbl_35"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtNight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listrectanglefourRowModel.txtNight}"
+                style="@style/txtUrbanistregular10" tools:text="@string/lbl_night"/>
+            <ImageView android:id="@+id/imageBookmark"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_bookmark_24x24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_24x24"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

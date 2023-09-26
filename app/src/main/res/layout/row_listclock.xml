@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listclockRowModel" type="com.pranjalranasapplication.app.modules.notifications.data.model.ListclockRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowclock"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16pxh"
+        android:paddingVertical="@dimen/_16pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+        <ImageView android:id="@+id/imageClock"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_83pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_group_cyan_600_180x185"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_group_cyan_600_180x185"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnpaymentsuccessfOne"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentsuccessfOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listclockRowModel.txtPaymentsuccessfOne}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_payment_success2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLalunahotelbookOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listclockRowModel.txtLalunahotelbookOne}"
+                style="@style/txtUrbanistromanmedium14_1" tools:text="@string/msg_laluna_hotel_bo"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

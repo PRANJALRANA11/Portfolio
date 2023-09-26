@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="filterResultVM" type="com.pranjalranasapplication.app.modules.filterresult.data.viewmodel.FilterResultVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFilterResult"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewSearchbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewsearchbar"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_hotel" app:searchIcon="@drawable/img_calculator"/>
+        <androidx.recyclerview.widget.RecyclerView android:gravity="end"
+            android:id="@+id/recyclerListsizemediumtypef"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_12pxh}" tools:itemCount="5" tools:listitem="@layout/row_listsizemediumtypef3"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameStackrecommended5863One"
+            android:layout_height="@dimen/_716pxv" android:layout_width="match_parent">
+            <LinearLayout
+                android:id="@+id/linearColumnrecommended5863One"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linearRowrecommended5863One"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtRecommended5863One"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{filterResultVM.filterResultModel.txtRecommended5863One}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/msg_recommended_58"/>
+                    <ImageView android:id="@+id/imageMenu"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_width="@dimen/_68pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_menu_28x68"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_menu_28x68"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerListrectanglefour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_24pxh}" tools:itemCount="4" tools:listitem="@layout/row_listrectanglefour3"/>
+            </LinearLayout>
+            <View
+                android:background="@drawable/rectangle_bg_gray_900_d8_radius_tl_16_tr_16"
+                android:id="@+id/viewTabbar"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_90pxv" android:layout_width="@dimen/_428pxh"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

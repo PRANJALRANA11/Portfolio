@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cancelBookingVM" type="com.pranjalranasapplication.app.modules.cancelbooking.data.viewmodel.CancelBookingVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCancelBooking"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearCard"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_8pxv" style="@style/groupStyleblue_gray_900_01cornerRadius">
+            <ImageView android:id="@+id/imageFrame"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame_gray_700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_gray_700"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCancelbooking"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{cancelBookingVM.cancelBookingModel.txtCancelbooking}"
+                style="@style/txtUrbanistromanbold24_2" tools:text="@string/lbl_cancel_booking"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{cancelBookingVM.cancelBookingModel.txtConfirmation}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/msg_are_you_sure_yo2"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtOnly80ofthe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{cancelBookingVM.cancelBookingModel.txtOnly80ofthe}"
+                style="@style/txtUrbanistregular14" tools:text="@string/msg_only_80_of_the"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowcancel"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_gray_800_radius_29"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center" android:id="@+id/btnCancel"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_58pxv"
+                    android:layout_width="@dimen/_184pxh"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_A700"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_cancel"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_cyan_600_01_radius_29"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center"
+                    android:id="@+id/btnContinue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_58pxv"
+                    android:layout_width="@dimen/_184pxh"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_59pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_continue"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_A700"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_continue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

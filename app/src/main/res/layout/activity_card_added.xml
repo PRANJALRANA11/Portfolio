@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cardAddedVM" type="com.pranjalranasapplication.app.modules.cardadded.data.viewmodel.CardAddedVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCardAdded"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPayment"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{cardAddedVM.cardAddedModel.txtPayment}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_payment"/>
+            <ImageView android:id="@+id/imageQrcode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_qrcode"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_qrcode"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnpaymentmethods"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_29pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_29pxv">
+            <LinearLayout android:id="@+id/linearRowpaymentmethods"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaymentmethods"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{cardAddedVM.cardAddedModel.txtPaymentmethods}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_payment_methods"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddnewcard"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{cardAddedVM.cardAddedModel.txtAddnewcard}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_add_new_card"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerCardAdded"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_28pxh}" tools:itemCount="3" tools:listitem="@layout/row_added"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaywithdebitcreOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{cardAddedVM.cardAddedModel.txtPaywithdebitcreOne}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_pay_with_debit"/>
+            <LinearLayout android:id="@+id/linearRowone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_26pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_26pxv" style="@style/groupStyleblue_gray_7">
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_27pxh"
+                    android:layout_width="@dimen/_44pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_4pxh}"
+                    imageRes="@{@drawable/img_image_27x44_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_image_27x44_1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{cardAddedVM.cardAddedModel.txtOne}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/msg"/>
+                <FrameLayout android:id="@+id/frameGroup2586"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:id="@+id/linearColumnellipse"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4pxh"
+                    android:paddingVertical="@dimen/_4pxv" style="@style/groupStylecornerRadius_2">
+                    <View
+                        android:background="@drawable/rectangle_bg_cyan_600_01_radius_5"
+                        android:id="@+id/viewEllipse"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_11pxh" android:layout_width="@dimen/_11pxh"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_cyan_600_01_radius_28"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_156pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpBlankVM" type="com.pranjalranasapplication.app.modules.signupblank.data.viewmodel.SignUpBlankVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearSignUpBlank"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_11pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_11pxv" style="@style/groupStylegray_900">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_height="@dimen/_28pxh"
+            android:layout_width="@dimen/_28pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <TextView android:id="@+id/txtCreateyouraccouOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{signUpBlankVM.signUpBlankModel.txtCreateyouraccouOne}"
+            style="@style/txtUrbanistromanbold48" tools:text="@string/msg_create_your_acc"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+            android:drawablePadding="@dimen/_12pxh"
+            android:drawableStart="@drawable/img_checkmark"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_email" android:id="@+id/etEmail"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_52pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@={signUpBlankVM.signUpBlankModel.etEmailValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_blue_gray_900_radius_12"
+            android:drawableEnd="@drawable/img_dashboard"
+            android:drawablePadding="@dimen/_30pxh"
+            android:drawableStart="@drawable/img_lock"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_password"
+            android:id="@+id/etPassword" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@={signUpBlankVM.signUpBlankModel.etPasswordValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:drawablePadding="@dimen/_12pxh"
+            android:drawableStart="@drawable/drawable_dhi_0"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:id="@+id/checkBoxUnchecked"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_3pxv"
+            android:paddingTop="@dimen/_3pxv" android:singleLine="true"
+            android:text="@string/lbl_remember_me"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_remember_me"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_cyan_600_radius_27"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnSignUp"
+            android:layout_height="@dimen/_55pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+        <LinearLayout android:id="@+id/linearRowline"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View android:background="@color/gray_800"
+                android:id="@+id/lineLine"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_96pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOrcontinuewith"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpBlankVM.signUpBlankModel.txtOrcontinuewith}"
+                style="@style/txtUrbanistsemibold18_2" tools:text="@string/msg_or_continue_wit"/>
+            <View android:background="@color/gray_800"
+                android:id="@+id/lineLineOne"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_96pxh"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowfacebook"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameTypelogintype"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxv"
+                android:layout_width="@dimen/_88pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_31pxh"
+                android:paddingStart="@dimen/_31pxh"
+                android:paddingTop="@dimen/_18pxv" style="@style/groupStyleblue_gray_1">
+                <ImageView android:id="@+id/imageFacebook"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_facebook"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_facebook"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameTypelogintype1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxv"
+                android:layout_width="@dimen/_87pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_31pxh"
+                android:paddingStart="@dimen/_31pxh"
+                android:paddingTop="@dimen/_18pxv" style="@style/groupStyleblue_gray_1">
+                <ImageView android:id="@+id/imageGoogle"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_google_24x24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_google_24x24"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameTypelogintype2"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxv"
+                android:layout_width="@dimen/_88pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_32pxh"
+                android:paddingStart="@dimen/_32pxh"
+                android:paddingTop="@dimen/_18pxv" style="@style/groupStyleblue_gray_1">
+                <ImageView android:id="@+id/imageFrame"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_autolayouthorizontal"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_autolayouthorizontal"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowconfirmation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpBlankVM.signUpBlankModel.txtConfirmation}"
+                style="@style/txtUrbanistregular14_2" tools:text="@string/msg_already_have_an"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSignin"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpBlankVM.signUpBlankModel.txtSignin}"
+                style="@style/txtUrbanistsemibold14" tools:text="@string/lbl_sign_in"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

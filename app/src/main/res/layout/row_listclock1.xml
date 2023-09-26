@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listclock1RowModel" type="com.pranjalranasapplication.app.modules.notifications.data.model.Listclock1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearRowclock"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16pxh"
+        android:paddingVertical="@dimen/_16pxv" style="@style/groupStyleblue_gray_900cornerRadius">
+        <ImageView android:id="@+id/imageClock"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_83pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_clock_1"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_clock_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnhotelbookingcanOne"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHotelbookingcanOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listclock1RowModel.txtHotelbookingcanOne}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_hotel_booking_c"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYouhavecanceledOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listclock1RowModel.txtYouhavecanceledOne}"
+                style="@style/txtUrbanistromanmedium14_1" tools:text="@string/msg_you_have_cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

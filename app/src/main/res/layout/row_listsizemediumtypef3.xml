@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsizemediumtypef3RowModel" type="com.pranjalranasapplication.app.modules.filterresult.data.model.Listsizemediumtypef3RowModel"/>
+    </data>
+    <TextView android:ellipsize="end"
+        android:id="@+id/txtSizemediumtypef"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:letterSpacing="0.01"
+        android:paddingBottom="@dimen/_8pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_8pxv" android:singleLine="true"
+        android:text="@{listsizemediumtypef3RowModel.txtSizemediumtypef}"
+        style="@style/txtSolidRounded" tools:text="@string/lbl_all_hotel"/>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="logoutVM" type="com.pranjalranasapplication.app.modules.logout.data.viewmodel.LogoutVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLogout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearColumnframe"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_8pxv" style="@style/groupStyleblue_gray_900_01cornerRadius">
+            <ImageView android:id="@+id/imageFrame"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame_gray_700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_gray_700"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLogout"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{logoutVM.logoutModel.txtLogout}"
+                style="@style/txtUrbanistromanbold24_2" tools:text="@string/lbl_logout"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{logoutVM.logoutModel.txtConfirmation}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/msg_are_you_sure_yo"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_cyan_600_01_radius_27"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnLogoutOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_55pxv"
+                android:layout_width="@dimen/_380pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_164pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_logout"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_logout"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_gray_800_radius_27"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnCancel"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_55pxv"
+                android:layout_width="@dimen/_380pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
